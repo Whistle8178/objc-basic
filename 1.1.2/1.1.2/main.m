@@ -9,7 +9,7 @@
 int main(int argc, const char * argv[])
 {
     NSArray *nums = @[@16, @15, @25, @54];
-    NSLog(@"nums= %@,nums");
+    NSLog(@"nums= %@",nums);
     
     NSDictionary *cours = @{@"A":@"水泳",@"B":@"バイク",@"C":@"ヨガ",@"D":@"サッカー"};
     NSLog(@"Aコース%@",cours[@"A"]);
