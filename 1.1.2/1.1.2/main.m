@@ -11,9 +11,9 @@ int main(int argc, const char * argv[])
     NSArray *nums = @[@16, @15, @25, @54];
     NSLog(@"nums= %@",nums);
     
-    NSDictionary *cours = @{@"A":@"水泳",@"B":@"バイク",@"C":@"ヨガ",@"D":@"サッカー"};
-    NSLog(@"Aコース%@",cours[@"A"]);
-    NSLog(@"Cコース%@",cours[@"C"]);
-    NSLog(@"コース%@",cours[@"D"]);
+    NSDictionary *cours = @{@"A":@"水泳", @"B":@"バイク", @"C":@"ヨガ", @"D":@"サッカー"};
+    NSLog(@"Aコース%@", cours[@"A"]);
+    NSLog(@"Cコース%@", cours[@"C"]);
+    NSLog(@"Dコース%@", cours[@"D"]);
     return 0;
 }
