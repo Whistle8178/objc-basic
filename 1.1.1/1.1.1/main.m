@@ -12,15 +12,23 @@
 
 int main(int argc, const char * argv[])
 {
-    BOOL isDone = YES;
-    if(isDone){
+    
+    BOOL YESNO = YES;
+    NSLog(@"YESNO: %@",(YESNO == 0 ? @"YES":@"NO"));
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    NSString* path = [NSHomeDirectory() stringByAppendingPathComponent:@"huge"];
+    BOOL rt = [manager fileExistsAtPath:path];
+    if(rt){
+        
         NSLog(@"Ok");
+        
     }else{
+        
         NSLog(@"None");
     }
     
     NSString *msg = @"thankyou";
-    
     NSDate *now = [NSDate date];
     NSLog(@"%@ %@",msg,now);
     
