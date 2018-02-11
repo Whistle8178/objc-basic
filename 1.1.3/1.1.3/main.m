@@ -1,6 +1,6 @@
 //
 //  main.m
-//  1.1.3
+//  1.1.3a
 //
 //  Created by 竹村鷹基 on 2018/02/06.
 //  Copyright © 2018年 竹村鷹基. All rights reserved.
@@ -12,7 +12,7 @@ int main(int argc, const char * argv[])
 {
     
     int yearOfBirth = 1991;
-    int heiseiGannen = 1989;
+    const int heiseiGannen = 1989;
     
     if (yearOfBirth >= heiseiGannen) {
         NSLog(@"平成以降に生まれました");
@@ -28,17 +28,15 @@ int main(int argc, const char * argv[])
     }
     
     int t=0;
-    for(int i=0;i<10;i++){
+    for(int i=0;i<=10;i++){
         t +=2;
         NSLog(@"%d,t=%d",i,t);
         
     }
-    NSArray *intitle = @[@16,@5,@25,@54];
-    NSInteger sum =0;
-    for(NSString *num in intitle){
-        sum+= [num intValue];
+    NSArray *weekdays = @[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Froday",@"Satrurday"];
+    for(NSString *str in weekdays){
+        NSLog(@"%@",str);
     }
-    NSLog(@" 合計 %d", sum);
     
     int month = 2;
     
