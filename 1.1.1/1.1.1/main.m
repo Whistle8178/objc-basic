@@ -12,22 +12,25 @@
 
 int main(int argc, const char * argv[])
 {
-    
+#pragma mark -  Life  Methods
+    //BOOL値の出力
     BOOL YESNO = YES;
     NSLog(@"YESNO: %@",(YESNO == 0 ? @"YES":@"NO"));
     
     NSFileManager* manager = [NSFileManager defaultManager];
+    //NSStringの出力
     NSString* path = [NSHomeDirectory() stringByAppendingPathComponent:@"huge"];
     BOOL rt = [manager fileExistsAtPath:path];
-    if(rt){
+    if (rt) {
         
         NSLog(@"Ok");
         
-    }else{
+    } else {
         
         NSLog(@"None");
     }
     
+    //文字列の出力
     NSString *msg = @"thankyou";
     NSDate *now = [NSDate date];
     NSLog(@"%@ %@",msg,now);
