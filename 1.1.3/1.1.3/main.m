@@ -13,7 +13,7 @@ int main(int argc, const char * argv[])
     
     int yearOfBirth = 1991;
     const int heiseiGannen = 1989;
-    
+    // if文、if〜else文、if〜eles〜if文
     if (yearOfBirth >= heiseiGannen) {
         NSLog(@"平成以降に生まれました");
     }
@@ -26,17 +26,32 @@ int main(int argc, const char * argv[])
         NSLog(@"平成より前に生まれました。");
         
     }
-    
-    int t=0;
-    for(int i=0;i<=10;i++){
-        t +=2;
+    //for文、高速列挙
+    int t = 0;
+    for(int i = 0;i <= 10; i++){
+        t += 2;
         NSLog(@"%d,t=%d",i,t);
         
     }
-    NSArray *weekdays = @[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Froday",@"Satrurday"];
+    NSArray *weekdays = @[@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Froday", @"Satrurday"];
     for(NSString *str in weekdays){
         NSLog(@"%@",str);
     }
+    //switch文
+    typedef NS_ENUM(NSUInteger,monthType){
+        January = 1,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December,
+    };
     
     int month = 2;
     
@@ -80,11 +95,12 @@ int main(int argc, const char * argv[])
         default:
             NSLog(@"月の値が正しくありません");
     }
+    //三項演算子
     double ans, a, b;
     a=5;
     b=2;
     
-    ans = (b>0)? a/b : a;
+    ans = (b > 0) ? a/b : a;
     NSLog(@"ans = %.lf", ans);
     
     return 0;
