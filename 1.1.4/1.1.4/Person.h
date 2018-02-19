@@ -10,12 +10,13 @@
 
 @interface Person : NSObject
 
--(void)setName:(NSString *)name;
--(NSString *)name;
--(void)setSex:(NSString *)sex;
--(NSString *)sex;
--(void)setLanguage:(NSString *)language;
--(NSString *)language;
--(void)setAge:(NSDate *)age;
--(NSDate *)age;
+@property NSString *name;
+@property NSNumber *age;
+@property NSString *language;
+@property NSString *sex;
+
+-(instancetype)initWithUserDate:(NSString*)name
+                            age:(NSNumber*)age
+                       language:(NSString*)language
+                            sex:(NSString*)sex;
 @end

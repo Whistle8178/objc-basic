@@ -7,48 +7,24 @@
 //
 
 #import "Person.h"
+@interface Person ()
+
+@end
 
 @implementation Person
-{
-    NSString *_name;
-    NSString *_sex;
-    NSString *_language;
-    NSData *_age;
-    
-}
--(void)setName:(NSString *)aName
-{
-    _name = aName;
-}
--(NSString *)name
-{
-    return _name;
-}
 
--(void)setSex:(NSString *)aSex
-{
-    _sex = aSex;
-}
--(NSString *)sex
-{
-    return _sex;
-}
--(void)setLanguage:(NSString *)aLanguage
-{
-    _language = aLanguage;
-}
--(NSString *)language
-{
-    return _language;
+-(instancetype)initWithUserDate:(NSString*)name
+                            age:(NSNumber*)age
+                       language:(NSString*)language
+                            sex:(NSString*)sex{
     
+    self = [super init];
+    if(self){
+        self.name = name;
+        self.age = age;
+        self.language = language;
+        self.sex = sex;
+    }
+    return self;
 }
--(void)setAge:(NSData *)aAge
-{
-    _age = aAge;
-}
--(NSData *)age
-{
-    return _age;
-}
-
 @end
