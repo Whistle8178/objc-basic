@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *language;
 
 @end
 
@@ -22,8 +23,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.language.text = NSLocalizedString(@"start obj-c", comment: "");
+    
+
 }
+
 
 
 @end
