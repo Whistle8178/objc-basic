@@ -17,17 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.language.text = NSLocalizedString(@"Obj-C講座をスタートしました", comment: "");
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    self.language.text = NSLocalizedString(@"start obj-c", comment: "");
-    
-
-}
-
-
 
 @end

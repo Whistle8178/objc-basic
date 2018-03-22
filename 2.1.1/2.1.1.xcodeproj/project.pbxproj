@@ -26,13 +26,8 @@
 		8B0E2E9E202C4A0D008B9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0E2EA0202C4A0D008B9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0E2EA1202C4A0D008B9D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8B0E2EA8202C4A73008B9D5A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		8B0E2EA9202C4A73008B9D5A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8B0E2EAA202C4A85008B9D5A /* File.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
-		8B15A7512047D23000B04DC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		8B15A7552047D2D800B04DC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B15A7572047D2ED00B04DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8B15A7582047D2EF00B04DC1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +160,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B0E2E99202C4A0C008B9D5A /* Base */,
-				8B0E2EA8202C4A73008B9D5A /* ja */,
-				8B15A7512047D23000B04DC1 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -175,7 +168,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B0E2E9E202C4A0D008B9D5A /* Base */,
-				8B0E2EA9202C4A73008B9D5A /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -183,9 +175,7 @@
 		8B15A7562047D2D800B04DC1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8B15A7552047D2D800B04DC1 /* en */,
 				8B15A7572047D2ED00B04DC1 /* Base */,
-				8B15A7582047D2EF00B04DC1 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
