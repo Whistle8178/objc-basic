@@ -11,10 +11,10 @@
 @implementation FavoriteProgrammingLanguageDelegate
 
 -(void)joinintern{
-   
+    
     if ([self.delegate respondsToSelector:@selector(canobjc)]){
-    NSLog(@"joiintern");
-    [self.delegate canobjc];
-}
+        NSLog(@"joiintern");
+        [self.delegate canobjc];
+    }
 }
 @end
