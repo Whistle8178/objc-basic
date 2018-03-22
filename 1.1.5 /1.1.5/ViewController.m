@@ -17,13 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Account *ac = [Account new];
-    [ac joinintern];
+    Account *account = [Account new];
+    [account joinintern];
     
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 @end
 
