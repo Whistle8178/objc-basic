@@ -1,8 +1,8 @@
 //
 //  main.m
-//  1.1.5
+//  2.1.8
 //
-//  Created by 竹村鷹基 on 2018/03/01.
+//  Created by 竹村鷹基 on 2018/02/18.
 //  Copyright © 2018年 竹村鷹基. All rights reserved.
 //
 
@@ -14,3 +14,4 @@ int main(int argc, char * argv[]) {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
+
