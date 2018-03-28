@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>image1</key>
+	<string>Image1</string>
+	<key>image2</key>
+	<string>長野県　大町市　大町</string>
+	<key>image3</key>
+	<string>Image2</string>
+	<key>image4</key>
+	<string>岐阜県　高山市</string>
+</dict>
+</plist>
