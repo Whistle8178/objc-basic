@@ -13,7 +13,6 @@
 		8B0E2EC2202C4D5C008B9D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E2EC1202C4D5C008B9D5A /* Assets.xcassets */; };
 		8B0E2EC5202C4D5C008B9D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E2EC3202C4D5C008B9D5A /* LaunchScreen.storyboard */; };
 		8B0E2EC8202C4D5C008B9D5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0E2EC7202C4D5C008B9D5A /* main.m */; };
-		8B0E2ECF202C4EDE008B9D5A /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0E2ECE202C4EDE008B9D5A /* images.xcassets */; };
 		8B48AFD0202C6EBC00ADAA83 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B48AFCF202C6EBC00ADAA83 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		8B0E2EC4202C4D5C008B9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0E2EC6202C4D5C008B9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0E2EC7202C4D5C008B9D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8B0E2ECE202C4EDE008B9D5A /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		8B48AFCF202C6EBC00ADAA83 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -69,7 +67,6 @@
 				8B0E2EBB202C4D5C008B9D5A /* ViewController.h */,
 				8B0E2EBC202C4D5C008B9D5A /* ViewController.m */,
 				8B0E2EBE202C4D5C008B9D5A /* Main.storyboard */,
-				8B0E2ECE202C4EDE008B9D5A /* images.xcassets */,
 				8B0E2EC1202C4D5C008B9D5A /* Assets.xcassets */,
 				8B0E2EC3202C4D5C008B9D5A /* LaunchScreen.storyboard */,
 				8B0E2EC6202C4D5C008B9D5A /* Info.plist */,
@@ -145,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0E2EC5202C4D5C008B9D5A /* LaunchScreen.storyboard in Resources */,
-				8B0E2ECF202C4EDE008B9D5A /* images.xcassets in Resources */,
 				8B0E2EC2202C4D5C008B9D5A /* Assets.xcassets in Resources */,
 				8B0E2EC0202C4D5C008B9D5A /* Main.storyboard in Resources */,
 			);
