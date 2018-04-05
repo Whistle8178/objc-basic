@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property UIAlertController * alertController;
+
 @end
 
 @implementation ViewController
@@ -17,23 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(50, 50, 150, 50);
-    [button setTitle:@"ボタン" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonWasTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    button = button;
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)buttonWasTapped:(UIButton *)button
-{
-    UIAlertController * ac =
-    [UIAlertController alertControllerWithTitle:@"Title"
-                                        message:@"Message"
+    self.alertController =
+    [UIAlertController alertControllerWithTitle:@"SNS選択"
+                                        message:@"Chose"
                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    
     UIAlertAction * cancelAction =
     [UIAlertAction actionWithTitle:@"Cancel"
                              style:UIAlertActionStyleCancel
@@ -43,7 +33,7 @@
                            }];
     UIAlertAction *  FacebookAction =
     [UIAlertAction actionWithTitle:@"Facebook"
-                             style:UIAlertActionStyleDestructive
+                             style:UIAlertActionStyleDefault
                            handler:^(UIAlertAction * action) {
                                
                                NSLog(@"Facebook");
@@ -62,11 +52,14 @@
                                
                                NSLog(@"Line");
                            }];
-    [ac addAction:cancelAction];
-    [ac addAction:FacebookAction];
-    [ac addAction:TwitterAction];
-    [ac addAction:LineAction];
-    [self presentViewController:ac animated:YES completion:nil];
+    [self.alertController addAction: FacebookAction];
+    [self.alertController addAction: TwitterAction];
+    [self.alertController addAction: LineAction];
+    [self.alertController addAction: cancelAction];
+}
+
+- (IBAction)snsButton:(id)sender {
     
+    [self presentViewController:self.alertController animated:YES completion:nil];
 }
 @end
