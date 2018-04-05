@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *pickerViewCont;
+
+//プロパティを定義
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UIView *backgroundView;
-- (IBAction)showBtn:(id)sender;
-- (IBAction)hideBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *pickerHiddenButton;
 
 @end
 

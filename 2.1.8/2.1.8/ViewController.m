@@ -29,23 +29,18 @@
     self.label.userInteractionEnabled = YES;
     self.label.tag = 100;
     
-    self.backgroundView.userInteractionEnabled = YES;
-    self.backgroundView.tag = 101;
-    self.pickerViewCont.hidden =YES;
-    
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-
 - (NSInteger) pickerView: (UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger) component {
-    return [self.myDateArray count];
+    return (self.myDateArray).count ;
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [_myDateArray objectAtIndex:row];
+    return _myDateArray[row];
     
 }
 
@@ -53,27 +48,22 @@
     NSLog(@"select = %@",_myDateArray[row]);
     self.label.text = _myDateArray[row];
 }
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [[event allTouches] anyObject];
-    if ( touch.view.tag == self.label.tag ) {
-        [self showBtn:self.label];
-    } else if (touch.view.tag == self.backgroundView.tag) {
-        [self hideBtn:self.backgroundView];
+// ラベルタッチイベント
+- (IBAction)labelTouch:(id)sender {
+    
+    // ピッカーと閉じるボタンが非表示の場合表示する
+    if ((self.pickerView.hidden = YES) && (self.pickerHiddenButton.hidden = YES)) {
+        self.pickerView.hidden = NO;
+        self.pickerHiddenButton.hidden = NO;
     }
 }
 
-- (IBAction)showBtn:(id)sender {
-    self.pickerViewCont.hidden =NO;
-    
-    
+// タッチでピッカーとDoneボタンを非表示にする
+- (IBAction)closePckerAndDoneButton:(id)sender {
+    self.pickerView.hidden = YES;
+    self.pickerHiddenButton.hidden = YES;
 }
 
-- (IBAction)hideBtn:(id)sender {
-    self.pickerViewCont.hidden =YES;
-    
-}
 @end
 
 
