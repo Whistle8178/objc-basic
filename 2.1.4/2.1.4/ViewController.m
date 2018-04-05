@@ -10,49 +10,35 @@
 
 @interface ViewController ()
 
+@property UIAlertController * alertController;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(50, 50, 150, 50);
-    [button setTitle:@"ボタン" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonWasTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    button = button;
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (void)buttonWasTapped:(UIButton *)button
-{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"確認"
-                                                                             message:@"実行します"
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
-                                                          [self yesButtonPushed];
-                                                      }]];
+    self.alertController = [UIAlertController alertControllerWithTitle:@"確認"
+                                                                   message:@"実行します"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action) {
+                                                         NSLog(@"OK");
+                                                     }];
     
-    [alertController addAction:[UIAlertAction actionWithTitle:@"Cansel"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction *action) {
-                                                          
-                                                          [self noButtonPushed];
-                                                      }]];
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cansel"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction *action) {
+                                                             
+                                                             NSLog(@"NO");
+                                                         }];
     
-    [self presentViewController:alertController animated:YES completion:nil];
+    [self.alertController addAction:cancelButton];
+    [self.alertController addAction:okButton];
 }
-- (void)yesButtonPushed {
-    NSLog(@"Ok");
+- (IBAction)confirmButton:(id)sender {
+    
+    [self presentViewController:self.alertController animated:YES completion:nil];
 }
-- (void)noButtonPushed {
-    NSLog(@"Cansel");
-}
-
 @end
