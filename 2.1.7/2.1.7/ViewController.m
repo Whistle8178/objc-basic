@@ -16,16 +16,23 @@
     [super viewDidLoad];
     _textField.delegate = self;
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+
+    if (textField.text.length == 0) {
+        textField.enablesReturnKeyAutomatically = YES;
+    }
+    return YES;
 }
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self.view endEditing:YES];
-    return NO;
-}
+
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    if (textField.text.length == 0) {
+        textField.enablesReturnKeyAutomatically = YES;
+    }
+    
     NSMutableString *tmp = [_textField.text mutableCopy];
     [tmp replaceCharactersInRange:range withString:string];
     BOOL isLengthLimit = [tmp length] <=30;
