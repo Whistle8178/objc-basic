@@ -10,6 +10,8 @@
 
 @interface ViewController () <UIPickerViewDelegate,UIPickerViewDataSource>
 @property (nonatomic,strong)NSArray *myDateArray;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
 @end
 
 @implementation ViewController
@@ -54,6 +56,7 @@
     // ピッカーと閉じるボタンが非表示の場合表示する
     if ((self.pickerView.hidden = YES) && (self.pickerHiddenButton.hidden = YES)) {
         self.pickerView.hidden = NO;
+        self.toolbar.hidden = NO;
         self.pickerHiddenButton.hidden = NO;
     }
 }
@@ -61,6 +64,7 @@
 // タッチでピッカーとDoneボタンを非表示にする
 - (IBAction)closePckerAndDoneButton:(id)sender {
     self.pickerView.hidden = YES;
+    self.toolbar.hidden = YES;
     self.pickerHiddenButton.hidden = YES;
 }
 
